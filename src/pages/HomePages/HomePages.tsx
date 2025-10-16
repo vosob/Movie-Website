@@ -1,3 +1,9 @@
+import { HeroAbout } from "../../components/Hero/HeroAbout/HeroAbout";
+
 export const HomePages = () => {
-  return <div>HomePage</div>;
+  return (
+    <div className="container">
+      <HeroAbout />
+    </div>
+  );
 };

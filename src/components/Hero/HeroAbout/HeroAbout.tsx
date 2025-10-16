@@ -1,9 +1,9 @@
 export const HeroAbout = () => {
   return (
-    <div className="absolute top-[344px] left-[66px] max-w-[600px] flex flex-col gap-6 text-white">
+    <div className="w-[553px] min-h-[725px] flex flex-col justify-end gap-6 text-white">
       <h2 className="font-bold text-5xl leading-tight">The Witcher</h2>
 
-      <p className="font-medium font-medium leading-relaxed opacity-90">
+      <p className="font-medium leading-relaxed opacity-90">
         Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his
         destiny in a turbulent world where people often prove more wicked than
         beasts
