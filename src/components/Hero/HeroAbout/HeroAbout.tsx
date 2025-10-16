@@ -1,12 +1,16 @@
-export const HeroAbout = () => {
+import type { Movie } from "../../../types/typesMovie";
+
+interface HeroAboutProps {
+  data: Movie[];
+}
+
+export const HeroAbout = ({ data }: HeroAboutProps) => {
   return (
     <div className="w-[553px] min-h-[725px] flex flex-col justify-end gap-6 text-white">
-      <h2 className="font-bold text-5xl leading-tight">The Witcher</h2>
+      <h2 className="font-bold text-5xl leading-tight">{data[0].name}</h2>
 
       <p className="font-medium leading-relaxed opacity-90">
-        Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his
-        destiny in a turbulent world where people often prove more wicked than
-        beasts
+        {data[0].description}
       </p>
       <div className="flex items-center gap-11 mt-4">
         <button className="w-[168px] h-[40px] flex items-center gap-2 bg-[#007bff] text-white px-5 py-3 rounded-full font-medium transition">
