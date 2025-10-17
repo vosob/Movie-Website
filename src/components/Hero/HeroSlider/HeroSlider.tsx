@@ -10,12 +10,12 @@ interface MovieSliderProps {
 
 export const MovieSlider = ({ data }: MovieSliderProps) => {
   return (
-    <div className=" max-w-[300px] max-h-[300px]    ">
+    <div className="w-[300px] h-[300px] relative top-60">
       <Swiper
         effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
+        grabCursor
+        centeredSlides
+        slidesPerView="auto"
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -23,14 +23,14 @@ export const MovieSlider = ({ data }: MovieSliderProps) => {
           modifier: 2.5,
         }}
         modules={[EffectCoverflow]}
-        className="mySwiper"
+        className="w-full h-full"
       >
         {data.map((movie) => (
           <SwiperSlide key={movie.id} className="w-[200px]">
             <img
               src={movie.imgUrl}
               alt={movie.name}
-              className="rounded-2xl object-cover"
+              className="rounded-2xl object-cover w-full h-full"
             />
           </SwiperSlide>
         ))}

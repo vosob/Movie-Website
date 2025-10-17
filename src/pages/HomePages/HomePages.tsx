@@ -14,11 +14,22 @@ export const HomePages = () => {
     <div className="container">
       {isLoading && <p>Loading pls wait </p>}
       {isError && <p>An error occurred</p>}
-      <div className="flex justify-between items-end">
-        {data && <HeroAbout data={data} />}
-        {data && <MovieSlider data={data} />}
+
+      <div className="flex justify-between flex-wrap gap-10">
+        {data && (
+          <>
+            <div className="flex-1 min-w-[300px]">
+              <HeroAbout data={data} />
+            </div>
+
+            <div className="flex-shrink-0">
+              <MovieSlider data={data} />
+            </div>
+          </>
+        )}
       </div>
-      {<Trends />}
+
+      {data && <Trends data={data} />}
     </div>
   );
 };
